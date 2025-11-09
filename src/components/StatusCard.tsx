@@ -18,7 +18,7 @@ export default function StatusCard({ isOnline, lastUpdate }: StatusCardProps) {
           )}
           <div>
             <h2 className="text-2xl font-bold text-gray-900 dark:text-white">
-              {isOnline ? 'Sistema Operational' : 'Sistema Offline'}
+              {isOnline ? 'Sistema Operacional' : 'Sistema Offline'}
             </h2>
             <p className="text-gray-600 dark:text-gray-400 mt-1">
               {isOnline ? 'Tudo Certo!' : 'Algo está errado...'}

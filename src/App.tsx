@@ -1,8 +1,6 @@
 import { useEffect, useState } from 'react';
 import { Moon, Sun, Globe, Clock } from 'lucide-react';
 import StatusCard from './components/StatusCard';
-import HistoryChart from './components/HistoryChart';
-import StatsGrid from './components/StatsGrid';
 
 interface StatusData {
   db: Array<{ Data: string; Resultado: string }>;
@@ -59,9 +57,6 @@ function App() {
 
   const isOnline = statusData?.real === 'Tudo Certo!';
   const recentChecks = statusData?.db?.slice(-24) || [];
-  const successRate = recentChecks.length > 0
-    ? (recentChecks.filter(r => r.Resultado === 'Tudo Certo!').length / recentChecks.length) * 100
-    : 100;
 
   return (
     <div className="min-h-screen bg-gray-50 dark:bg-gray-900 transition-colors duration-300">
@@ -101,19 +96,11 @@ function App() {
               lastUpdate={lastUpdate}
             />
 
-            <StatsGrid
-              successRate={successRate}
-              totalChecks={recentChecks.length}
-              lastCheck={lastUpdate}
-            />
-
-            <HistoryChart data={recentChecks} />
-
             <div className="bg-white dark:bg-gray-800 rounded-2xl shadow-lg p-6 transition-all duration-300">
               <div className="flex items-center gap-2 mb-4">
                 <Clock className="w-5 h-5 text-gray-600 dark:text-gray-400" />
                 <h2 className="text-xl font-semibold text-gray-900 dark:text-white">
-                  Recent Activity
+                  Atividade Recente
                 </h2>
               </div>
               <div className="space-y-2 max-h-96 overflow-y-auto">
