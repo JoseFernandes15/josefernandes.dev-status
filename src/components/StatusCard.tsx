@@ -37,7 +37,7 @@ export default function StatusCard({ isOnline, lastUpdate }: StatusCardProps) {
       </div>
       <div className="flex items-center gap-2 text-sm text-gray-500 dark:text-gray-400">
         <RefreshCw className="w-4 h-4" />
-        <span>Last checked: {lastUpdate.toLocaleTimeString()}</span>
+        <span>Ultima Verificação: {lastUpdate.toLocaleTimeString()}</span>
       </div>
     </div>
   );
