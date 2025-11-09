@@ -69,7 +69,7 @@ function App() {
         <header className="flex justify-between items-center mb-12">
           <div>
             <h1 className="text-3xl font-bold text-gray-900 dark:text-white mb-2">
-              Portfolio Status
+              Portfólio Status
             </h1>
             <p className="text-gray-600 dark:text-gray-400 flex items-center gap-2">
               <Globe className="w-4 h-4" />
@@ -145,7 +145,7 @@ function App() {
         )}
 
         <footer className="mt-12 text-center text-sm text-gray-500 dark:text-gray-400">
-          <p>Monitoring josefernandes.dev • Updated every minute</p>
+          <p>Monitoring josefernandes.dev</p>
         </footer>
       </div>
     </div>

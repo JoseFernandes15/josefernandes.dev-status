@@ -6,7 +6,7 @@ interface StatusCardProps {
   lastUpdate: Date;
 }
 
-export default function StatusCard({ isOnline, status, lastUpdate }: StatusCardProps) {
+export default function StatusCard({ isOnline, lastUpdate }: StatusCardProps) {
   return (
     <div className="bg-gradient-to-br from-white to-gray-50 dark:from-gray-800 dark:to-gray-900 rounded-2xl shadow-xl p-8 transition-all duration-300">
       <div className="flex items-center justify-between mb-6">
@@ -18,9 +18,11 @@ export default function StatusCard({ isOnline, status, lastUpdate }: StatusCardP
           )}
           <div>
             <h2 className="text-2xl font-bold text-gray-900 dark:text-white">
-              {isOnline ? 'All Systems Operational' : 'System Offline'}
+              {isOnline ? 'Sistema Operational' : 'Sistema Offline'}
             </h2>
-            <p className="text-gray-600 dark:text-gray-400 mt-1">{status}</p>
+            <p className="text-gray-600 dark:text-gray-400 mt-1">
+              {isOnline ? 'Tudo Certo!' : 'Algo está errado...'}
+            </p>
           </div>
         </div>
         <div
